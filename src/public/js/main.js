@@ -1,7 +1,11 @@
+import init from './map.js'
+import Validator from './validator.js'
+import './maskPhone.js'
+
+
 window.addEventListener('load', () => {
     const tabsEl = document.querySelector('.shipping_tabs'); 
     const buttonEl = document.querySelector('.shipping_button');
-    
     
     //Ожидание клика на смене вкладки
     tabsEl.addEventListener('click', evt => { 

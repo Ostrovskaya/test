@@ -1,4 +1,4 @@
-class Validator {
+export default class Validator {
     constructor(form){
         this.regExp = {
             'name': /^[а-яА-ЯёЁ\s-]+$/,

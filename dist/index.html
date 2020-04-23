@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru_RU" type="text/javascript"></script>
+    <script defer src="js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/659140403b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="shipping">
+        <h1 class="shipping_title">Выберите способ доставки</h1>
+        <div class="shipping_tabs">
+            <div class="shipping_tab shipping_tab__active" data-tab="delivery">Доставка</div>
+            <div class="shipping_tab"  data-tab="pickup">Самовывоз</div>
+        </div>
+        <div class="shipping_content">
+            <form action="#" class="shipping_form delivery" id="delivery">
+                <div class="delivery_block">
+                    <label class="delivery_label" for="name">ФИО
+                        <input class="delivery_name" name="name" type="text" id="name" placeholder="Только кириллица">
+                    </label>
+                    
+                    <label class="delivery_label" for="phone">Введите свой номер телефона:
+                        <input class="delivery_phone" name="phone" type="text" id="phone" placeholder="+7 (___) ___-__-__">
+                    </label>  
+                </div>
+                <label class="delivery_label" for="address">Адрес доставки
+                    <input class="delivery_address" name="address" type="text" id="address"  placeholder="Город, улица, дом">   
+                </label>
+                <label class="delivery_label" for="comment">Коментарий
+                    <textarea class="delivery_comment" name="comment" type="text" id="comment"></textarea>
+                </label>
+            </form>
+            <form action="#"class="shipping_form pickup hidden" id="pickup">
+                <div class="pickup_points">
+                    <input class="pickup_input" type="radio" name="point" id="address1"><label class="pickup_adr" for="address1">Пункт выдачи заказов Песчаная ул., д. 13</label>
+                    <input class="pickup_input" type="radio" name="point" id="address2"><label class="pickup_adr" for="address2">Пункт выдачи заказов Подсосенский пер., д. 11</label>
+                </div> 
+                <div class="pickup_map" id="map" ></div>
+            </form>
+            <input class="shipping_button" type="submit" value="Оформить заказ" form="delivery">
+        </div>
+        
+    </section>
+<script src="main.js"></script></body>
+</html>
