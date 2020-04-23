@@ -1,0 +1,155 @@
+@import 'define'
+
+*
+    padding: 0
+    margin: 0
+    
+html
+    font-family: 'Roboto', sans-serif
+
+.input 
+    margin-top: 12px 
+    display: block 
+    box-sizing: border-box 
+    border: 1px solid $main_grey
+    border-radius: 4px
+    height: 42px
+    padding: 0 17px
+    font-size: 16px
+    line-height: 24px
+    color: $main_black
+    &:placeholder
+        color: $main_grey
+    &:focus
+        border: 1px solid $main_black
+        outline: none
+
+.button
+    background: $active_blue
+    border-radius: 80px
+    color: $main_white
+    font-size: 16px
+    line-height: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 48px
+    width: 200px
+    border: none
+    margin-left: auto
+    margin-right: 0
+    &:hover
+        background: $active_dark_blue
+    &:active
+        background: $main_grey_light
+        color: $main_grey
+
+.error
+    position: relative
+    &::after
+        content: ''
+        background-image: url('../img/error.png')
+        display: block
+        width: 22px
+        height: 22px
+        position: absolute
+        right: 13px
+        bottom: 13px
+
+.errorMsg
+    position: absolute
+    color: $alert_red
+    font-size: 12px
+
+.shipping
+    background-color: $background_grey
+    padding-top: 36px
+    &_content
+        background-color: $main_white
+        padding: 16px
+    &_title
+        font-weight: normal
+        font-size: 32px
+        line-height: 36px
+        margin-bottom: 28px
+        margin-left: 16px
+        color: $main_black
+    &_tabs
+        display: flex
+    &_tab
+        width: 108px
+        height: 38px
+        font-size: 16px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $main_grey
+        margin-right: 8px
+        background: $main_grey_light
+        border-radius: 5px 5px 0px 0px
+        &__active
+            color: $active_blue
+            background-color: $main_white
+    &_button
+        @extend .button
+        margin-top: 28px
+
+.delivery
+    &_label
+        display: block
+        font-size: 12px
+        color: $main_black   
+        margin-bottom: 36px   
+    &_name,
+    &_phone
+        @extend .input
+        width: 100%
+    &_address
+        @extend .input
+        width: 100% 
+    &_comment
+        @extend .input
+        width: 100% 
+        height: 112px
+        padding: 12px 17px
+        resize: none
+    & .errorMsg
+        left: 0
+        bottom: -20px
+    
+.pickup
+    position: relative
+    &_map
+        width: 100%
+        height: 380px   
+    &_adr
+        font-size: 12px
+        line-height: 20px
+        margin-bottom: 16px
+        color: $main_black
+        display: flex
+        align-items: center
+        &::before
+            content: "\f111"
+            display: inline-block
+            font-family: 'FontAwesome'
+            font-size: 16px
+            margin-right: 8px 
+            color: $main_black
+        &:hover
+            color: $active_blue    
+    &_input
+        display: none
+        &:checked + label::before
+            content: "\f192"
+    & .errorMsg
+        top: -23px
+
+@import 'media'       
+
+.hidden
+    display: none
+
+
+
+

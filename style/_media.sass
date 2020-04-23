@@ -1,0 +1,50 @@
+@media (max-width: 320px)
+    body
+        min-width: 320px
+        overflow-x: auto
+    
+@media (min-width: 738px)
+    .input 
+        height: 48px
+    .shipping
+        background-color: $background_grey
+        padding: 0 15px
+        padding-top: 72px
+        &_content
+            padding: 44px 40px 48px 40px
+        &_title
+            margin-left: 0
+            line-height: 40px
+            margin-bottom: 48px
+        &_button
+            margin-top: 40px
+        &_tab
+            width: 152px
+            height: 48px
+    .delivery  
+        width: 100%  
+        &_block
+            display: flex
+            justify-content: space-between
+        &_label
+            flex-basis: 49% 
+        &_comment
+            height: 112px    
+
+    .pickup
+        &_map
+            height: 560px
+        &_points
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between    
+        &_adr
+            flex-basis: 45%
+            font-size: 16px
+            line-height: 24px
+            margin-bottom: 26px
+            
+@media (min-width: 1054px)
+    .shipping
+        padding: 0 calc( 50% - 516px )
+        padding-top: 72px
