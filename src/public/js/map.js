@@ -1,7 +1,7 @@
 
 //Массив с координатами пунктов выдачи
 let points = [];
-let API_url = "../api/points.json"
+let API_url = "https://raw.githubusercontent.com/Ostrovskaya/test/master/src/public/api/points.json"
 getData(API_url).then(d => {points = d})
 
 async function getData(url) {

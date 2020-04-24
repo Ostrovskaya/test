@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.input, .delivery_name, .delivery_phone, .delivery_address, .delivery_comment {
+  margin-top: 12px;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  height: 42px;
+  padding: 0 17px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222222;
+}
+
+.input:placeholder, .delivery_name:placeholder, .delivery_phone:placeholder, .delivery_address:placeholder, .delivery_comment:placeholder {
+  color: #999999;
+}
+
+.input:focus, .delivery_name:focus, .delivery_phone:focus, .delivery_address:focus, .delivery_comment:focus {
+  border: 1px solid #222222;
+  outline: none;
+}
+
+.button, .shipping_button {
+  background: #215BF0;
+  border-radius: 80px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 48px;
+  width: 200px;
+  border: none;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.button:hover, .shipping_button:hover {
+  background: #0F41C3;
+}
+
+.button:active, .shipping_button:active {
+  background: #EDEEEF;
+  color: #999999;
+}
+
+.error {
+  position: relative;
+}
+
+.error::after {
+  content: '';
+  background-image: url(../src/public/img/error.svg);
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 13px;
+  bottom: 13px;
+}
+
+.errorMsg {
+  position: absolute;
+  color: #F12828;
+  font-size: 12px;
+}
+
+.shipping {
+  background-color: #F6F6F6;
+  padding-top: 36px;
+}
+
+.shipping_content {
+  background-color: #ffffff;
+  padding: 16px;
+}
+
+.shipping_title {
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 36px;
+  margin-bottom: 28px;
+  margin-left: 16px;
+  color: #222222;
+}
+
+.shipping_tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shipping_tab {
+  width: 108px;
+  height: 38px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #999999;
+  margin-right: 8px;
+  background: #EDEEEF;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.shipping_tab__active {
+  color: #215BF0;
+  background-color: #ffffff;
+}
+
+.shipping_button {
+  margin-top: 28px;
+}
+
+.delivery_label {
+  display: block;
+  font-size: 12px;
+  color: #222222;
+  margin-bottom: 36px;
+}
+
+.delivery_name, .delivery_phone {
+  width: 100%;
+}
+
+.delivery_address {
+  width: 100%;
+}
+
+.delivery_comment {
+  width: 100%;
+  height: 112px;
+  padding: 12px 17px;
+  resize: none;
+}
+
+.delivery .errorMsg {
+  left: 0;
+  bottom: -20px;
+}
+
+.pickup {
+  position: relative;
+}
+
+.pickup_map {
+  width: 100%;
+  height: 380px;
+}
+
+.pickup_adr {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 16px;
+  color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pickup_adr::before {
+  content: "\f111";
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-size: 16px;
+  margin-right: 8px;
+  color: #222222;
+}
+
+.pickup_adr:hover {
+  color: #215BF0;
+}
+
+.pickup_input {
+  display: none;
+}
+
+.pickup_input:checked + label::before {
+  content: "\f192";
+}
+
+.pickup .errorMsg {
+  top: -23px;
+}
+
+@media (max-width: 320px) {
+  body {
+    min-width: 320px;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 738px) {
+  .input, .delivery_name, .delivery_phone, .delivery_address, .delivery_comment {
+    height: 48px;
+  }
+  .shipping {
+    background-color: #F6F6F6;
+    padding: 0 15px;
+    padding-top: 72px;
+  }
+  .shipping_content {
+    padding: 44px 40px 48px 40px;
+  }
+  .shipping_title {
+    margin-left: 0;
+    line-height: 40px;
+    margin-bottom: 48px;
+  }
+  .shipping_button {
+    margin-top: 40px;
+  }
+  .shipping_tab {
+    width: 152px;
+    height: 48px;
+  }
+  .delivery {
+    width: 100%;
+  }
+  .delivery_block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .delivery_label {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+  }
+  .delivery_comment {
+    height: 112px;
+  }
+  .pickup_map {
+    height: 560px;
+  }
+  .pickup_points {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .pickup_adr {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: 1054px) {
+  .shipping {
+    padding: 0 calc( 50% - 516px);
+    padding-top: 72px;
+  }
+}
+
+.hidden {
+  display: none;
+}

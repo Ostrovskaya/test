@@ -2,7 +2,7 @@ export default class Validator {
     constructor(form){
         this.regExp = {
             'name': /^[а-яА-ЯёЁ\s-]+$/,
-            'phone':/^\+7\(\d{3}\)\d{3}-\d{4}$/,
+            'phone':/^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
             'address': /.+/,
             'comment': /.+/,
         };
