@@ -67,7 +67,7 @@ html {
 
 .error::after {
   content: '';
-  background-image: url(../src/public/img/error.svg);
+  background-image: url(../img/error.svg);
   display: block;
   width: 22px;
   height: 22px;
