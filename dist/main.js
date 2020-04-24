@@ -129,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/public/js/maskPhone.js?");
+eval("const inputPhone = document.querySelector('.delivery_phone');\r\n\r\nlet old = 0;\r\n\r\ninputPhone.addEventListener('focus', evt => {\r\n    if(inputPhone.value == ''){\r\n        inputPhone.value = '+7(';\r\n    } \r\n    old = 3;\r\n})\r\ninputPhone.addEventListener('blur', evt => {\r\n    if(inputPhone.value == '+7('){\r\n        inputPhone.value = '';\r\n    } \r\n    old = 0;   \r\n})\r\ninputPhone.addEventListener('input', evt => {\r\n    if(inputPhone.value.length < old) {\r\n        old--;\r\n        return;\r\n    }\r\n    if(inputPhone.value.length == 6){\r\n        inputPhone.value +=')';\r\n    }\r\n    if(inputPhone.value.length == 10){\r\n        inputPhone.value +='-';\r\n    }\r\n    if(inputPhone.value.length == 13){\r\n        inputPhone.value +='-';\r\n    }\r\n    old++;\r\n}) \n\n//# sourceURL=webpack:///./src/public/js/maskPhone.js?");
 
 /***/ }),
 
